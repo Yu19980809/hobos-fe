@@ -1,0 +1,95 @@
+/* pages/shows/show/index.wxss */
+
+/* poster */
+.poster {
+    height: 340rpx;
+}
+
+/* name */
+.clubName {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.showName {
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+/* datetime */
+.datetime {
+    border-top: 2rpx solid rgba(70, 70, 70, .4);
+    border-bottom: 2rpx solid rgba(70, 70, 70, .4);
+}
+
+.datetime .date, .time {
+    height: 100rpx;
+}
+
+.datetime .date .key, .time .key {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.datetime .date .value, .time .value {
+    height: 60rpx;
+}
+
+/* address */
+.address {
+    min-height: 60rpx;
+}
+
+.address image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* description */
+.description .title {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.description .content {
+	min-height: 60rpx;
+	color: #606162;
+    text-indent: 2rem;
+}
+
+/* comedian */
+.comedian .title {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.comedian .names {
+    height: 100rpx;
+}
+
+.comedian .names .view {
+	min-width: 40rpx;
+	height: 60rpx;
+}
+
+/* member */
+.member .title {
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.member .avatars {
+    min-height: 100rpx;
+}
+
+.member .avatars image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+
+/* btns */
+.btns .cancel {
+    background-color: #FFDFDF;
+    color: #000;
+}

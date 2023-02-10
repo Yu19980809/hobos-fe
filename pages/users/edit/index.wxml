@@ -1,0 +1,129 @@
+<!-- 编辑用户信息 -->
+<view class="container">
+	<!-- avatar -->
+	<button
+		class="avatar mauto my0 pa0 circle"
+		open-type="chooseAvatar"
+		bind:chooseavatar="onChooseAvatar"
+	>
+		<image src="{{ avatarUrl }}" mode="aspectFill" class="w100 h100 circle"/>
+	</button>
+	<view class="edit">
+		<image src="/images/userEdit/edit.svg" mode="aspectFill" class="w100 h100 circle"/>
+	</view>
+
+	<form bindsubmit="onEditUserInfo">
+		<!-- info -->
+		<view class="py30">
+			<view class="f32 bold my20">
+				个人档案
+			</view>
+
+			<view class="info pa20 bt bb f32 bold">
+				<view class="role">
+					<view class="left">
+						<image src="/images/userEdit/identity.svg" mode="aspectFill"/>
+						<text>身份</text>
+					</view>
+					<view class="right">
+						<view class="dropdown">
+							<view class="select_box">
+							<view class="select" catchtap="onSelectTaps">
+								<text class="select_text">{{ roles[index] }}</text>
+								<image class="select_img:{{ isMenuShow&&'select_img_rotate' }}" src="/images/down.svg"></image>
+							</view>
+
+							<view class="option_box" style="height:{{ isMenuShow?(roles.length>8?890:roles.length*70):0 }}rpx;">
+								<text class="option-list" wx:for="{{ roles }}" wx:key="this" data-index="{{ index }}" catchtap="onOptionTaps"
+								style="{{ index==roles.length-1&&'border:0;' }}">{{item}}</text>
+							</view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="name">
+					<view class="left">
+						<image src="/images/user.svg" mode="aspectFill"/>
+						<text wx:if="{{ roles[index] === '演员' }}">艺名</text>
+						<text wx:else>用户名</text>
+					</view>
+					<view class="right">
+						<input name="nickname" type="text" value="{{ user.nickname }}" placeholder="路人甲"/>
+					</view>
+				</view>
+
+				<view class="slogan" wx:if="{{ roles[index] === '演员' }}">
+					<view class="left">
+						<image src="/images/userEdit/slogan.svg" mode="aspectFill"/>
+						<text>一句简介</text>
+					</view>
+					<view class="right">
+						<input name="slogan" type="text"
+							placeholder="脱缰野马"
+							value="{{ currentRole === 'comedian' ? (user.slogan || '') : '' }}"
+						/>
+					</view>
+				</view>
+
+				<view class="experience" wx:if="{{ roles[index] === '演员' }}">
+					<view class="left">
+						<image src="/images/userEdit/stage.svg" mode="aspectFill"/>
+						<text>演出经验</text>
+					</view>
+					<view class="right">
+						<input name="experience" type="text"
+							placeholder="暂无"
+							value="{{ currentRole === 'comedian' ? (user.experience || '') : '' }}"
+						/>
+					</view>
+				</view>
+
+				<view class="clubName" wx:if="{{ roles[index] === '主理人' }}">
+					<view class="left">
+						<image src="/images/club.svg" mode="aspectFill"/>
+						<text>俱乐部名称</text>
+					</view>
+					<view class="right">
+						<input name="clubName" type="text"
+							placeholder="贰叁叁俱乐部"
+							value="{{ currentRole === 'holder' ? (user.club.name || '') : '' }}"
+						/>
+					</view>
+				</view>
+
+				<view class="clubAddr" wx:if="{{ roles[index] === '主理人' }}">
+					<view class="left">
+						<image src="/images/address.svg" mode="aspectFill"/>
+						<text>俱乐部地址</text>
+					</view>
+					<view class="right">
+						<input name="clubAddr" type="text"
+							placeholder="延平路425"
+							value="{{ currentRole === 'holder' ? (user.club.address || '') : '' }}"
+						/>
+					</view>
+				</view>
+
+				<view class="clubDesc" wx:if="{{ roles[index] === '主理人' }}">
+					<view class="left">
+						<image src="/images/description.svg" mode="aspectFill"/>
+						<text>俱乐部简介</text>
+					</view>
+					<view class="right">
+						<input name="clubDesc" type="text"
+							placeholder="空空如也"
+							value="{{ currentRole === 'holder' ? (user.club.description || '') : '' }}"
+						/>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- button -->
+		<view class="button">
+			<button form-type="submit" class="pa0 btn-black f32 mauto my40">保存信息</button>
+		</view>
+	</form>
+	
+</view>

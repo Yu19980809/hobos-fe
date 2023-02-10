@@ -1,0 +1,65 @@
+/* pages/users/index/index.wxss */
+
+/* info part */
+.info {
+	max-height: 600rpx;
+	background-color: #000;
+}
+
+.avatar {
+	width: 340rpx;
+	height: 340rpx;
+}
+
+.name, .role, .followers {
+	height: 60rpx;
+	line-height: 60rpx;
+}
+
+.followers {
+	width: 140rpx;
+	background-color: rgb(142,80,88);
+}
+
+/* actions */
+.actions > view {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 110rpx;
+	box-sizing: border-box;
+	margin-bottom: 10rpx;
+}
+
+.actions > view .left {
+	display: flex;
+	align-items: center;
+	width: 80%;
+}
+
+.actions > view .left text {
+	margin-left: 20rpx;
+	font-size: 31rpx;
+	letter-spacing: 4rpx;
+}
+
+.actions > view .right {
+	width: 20%;
+	text-align: right;
+}
+
+.actions image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+/* help */
+.help {
+	height: 100rpx;
+}
+
+.help image {
+	width: 60rpx;
+	height: 60rpx;
+}

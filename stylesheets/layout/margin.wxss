@@ -10,6 +10,7 @@
 
 .mb0 { margin-bottom: 0 !important; }
 .mb { margin-bottom: 10rpx !important; }
+.mb16 { margin-bottom: 16rpx !important; }
 .mb20 { margin-bottom: 20rpx !important; }
 .mb30 { margin-bottom: 30rpx !important; }
 .mb40 { margin-bottom: 40rpx !important; }
@@ -57,6 +58,7 @@
 .my60 { margin-top: 60rpx !important; margin-bottom: 60rpx !important; }
 .my100 { margin-top: 100rpx !important; margin-bottom: 100rpx !important; }
 
+.mx0 { margin-right: 0 !important; margin-left: 0 !important; }
 .mx { margin-right: 10rpx !important; margin-left: 10rpx !important; }
 .mx20 { margin-right: 20rpx !important; margin-left: 20rpx !important; }
 .mx30 { margin-right: 30rpx !important; margin-left: 30rpx !important; }
@@ -122,14 +124,17 @@
 .py40 { padding-top: 40rpx !important; padding-bottom: 40rpx !important; }
 .py50 { padding-top: 50rpx !important; padding-bottom: 50rpx !important; }
 .py60 { padding-top: 60rpx !important; padding-bottom: 60rpx !important; }
+.py90 { padding-top: 90rpx !important; padding-bottom: 90rpx !important; }
 .py100 { padding-top: 100rpx !important; padding-bottom: 100rpx !important; }
 
+.px0 { padding-right: 0 !important; padding-left: 0 !important; }
 .px { padding-right: 10rpx !important; padding-left: 10rpx !important; }
 .px20 { padding-right: 20rpx !important; padding-left: 20rpx !important; }
 .px30 { padding-right: 30rpx !important; padding-left: 30rpx !important; }
 .px40 { padding-right: 40rpx !important; padding-left: 40rpx !important; }
 .px50 { padding-right: 50rpx !important; padding-left: 50rpx !important; }
 .px60 { padding-right: 60rpx !important; padding-left: 60rpx !important; }
+.px80 { padding-right: 80rpx !important; padding-left: 80rpx !important; }
 .px100 { padding-right: 100rpx !important; padding-left: 100rpx !important; }
 
 .grid-3 { 

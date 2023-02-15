@@ -11,7 +11,7 @@
 
     <!-- name -->
     <view class="py30 px0">
-        <view class="clubName mb20 opacity7 f32">{{ show.club_name }}</view>
+        <view class="clubName mb20 opacity7 f32">{{ show.club.name }}</view>
         <view class="showName f40 bold">{{ show.name }}</view>
     </view>
 
@@ -57,16 +57,16 @@
         </view>
     </view>
 
-    <!-- member -->
-    <view class="member py40 px0" wx:if="{{ show && show.members && show.members.length !== 0 }}">
+    <!-- audiences -->
+    <view class="audience py40 px0" wx:if="{{ show && show.audiences && show.audiences.length !== 0 }}">
         <view class="title mb20 f32 bold">参与人员</view>
-        <view class="avatars flex items-center">
+        <view class="avatars">
             <image
-                src="{{ member.avatar }}"
+                src="{{ audience.avatar }}"
                 mode="aspectFill"
                 class="circle mr20"
-                wx:for="{{ show.members }}"
-                wx:for-item="member"
+                wx:for="{{ show.audiences }}"
+                wx:for-item="audience"
                 wx:key="index"
             />
         </view>
@@ -74,7 +74,7 @@
 
     <!-- btns -->
     <view class="btns flex justify-around items-center pb40" wx:if="{{ !isExpired }}">
-        <view class="btn-pink" wx:if="{{ isBooked }}" bindtap="onCancel">取消参加</view>
+        <view class="btn-pink" wx:if="{{ isBooked }}" bindtap="onUnbook">取消参加</view>
         <view class="btn-black" wx:else bindtap="onBook">我要参加</view>
     </view>
 </view>

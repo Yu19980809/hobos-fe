@@ -72,17 +72,21 @@
 	height: 60rpx;
 }
 
-/* member */
-.member .title {
+/* audience */
+.audience .title {
     height: 40rpx;
     line-height: 40rpx;
 }
 
-.member .avatars {
-    min-height: 100rpx;
+.audience .avatars {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    white-space: nowrap;
+    overflow-x: scroll;
 }
 
-.member .avatars image {
+.audience .avatars image {
     width: 80rpx;
     height: 80rpx;
 }

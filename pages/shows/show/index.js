@@ -9,7 +9,8 @@ Page({
    */
   data: {
     show: '',
-    isBooked: false
+    isBooked: false,
+    isExpired: false
   },
 
   /**
@@ -19,7 +20,9 @@ Page({
     // 1. get id of current show
     // 2. fetch details of this show
     // 3. check booking status
-    const { id } = options
+    // 4. check expired status
+    const { id, isExpired } = options
+    this.setData({ isExpired })
     this.onFetchShowInfo(id)
     if (this.data.show && this.data.show !== '') {
       this.onCheckBookingStatus()
@@ -142,7 +145,6 @@ Page({
     // 1. get comedian id
     // 2. go to comdian detail page
     const { id } = e.currentTarget.dataset
-    console.log('comedian detail', id)
     wx.navigateTo({
       url: `/pages/comedians/show/index?comedianId=${id}`
     })

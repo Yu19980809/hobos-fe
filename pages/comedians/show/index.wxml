@@ -21,11 +21,11 @@
 					<text
 						class="unfollow"
 						wx:if="{{ isFollowed }}"
-						bindtap="onCancelComedianFollow"
+						bindtap="onUnfollowComedian"
 					>取关</text>
 					<text
 						wx:else
-						bindtap="onNewComedianFollow"
+						bindtap="onFollowComedian"
 					>关注</text>
 				</view>
 			</view>

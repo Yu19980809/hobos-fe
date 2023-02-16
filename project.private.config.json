@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "mine",
+          "pathName": "pages/users/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

@@ -13,7 +13,7 @@
 		<view class="role f32">
 			<text wx:if="{{ user.role === 'audience' }}">观众</text>
 			<text wx:if="{{ user.role === 'comedian' }}">演员</text>
-			<text wx:if="{{ user.role === 'holder' }}">主理人</text>
+			<text wx:if="{{ user.role === 'manager' }}">主理人</text>
 		</view>
 
 		<view class="followers f24 b px20 radius20 mt20 tc" wx:if="{{ user.role !== 'audience' }}">
@@ -21,7 +21,7 @@
 				粉丝数： 
 				<text class="f32">{{ user.comedian_followers.length }}</text>
 			</view>
-			<view wx:if="{{ user.role === 'holder' }}">
+			<view wx:if="{{ user.role === 'manager' }}">
 				粉丝数： 
 				<text class="f32">{{ user.club_followers.length }}</text>
 			</view>
@@ -61,7 +61,7 @@
 		</view>
 
 		<view
-			wx:if="{{ user.role === 'holder' }}"
+			wx:if="{{ user.role === 'manager' }}"
 			class="management"
 			bindtap="onNavigateToShowManagement"
 		>

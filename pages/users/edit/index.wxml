@@ -6,7 +6,7 @@
 		open-type="chooseAvatar"
 		bind:chooseavatar="onChooseAvatar"
 	>
-		<image src="{{ avatarUrl }}" mode="aspectFill" class="w100 h100 circle"/>
+		<image src="{{ user.avatar }}" mode="aspectFill" class="w100 h100 circle"/>
 	</button>
 	<view class="edit">
 		<image src="/images/userEdit/edit.svg" mode="aspectFill" class="w100 h100 circle"/>
@@ -87,7 +87,7 @@
 					<view class="right">
 						<input name="clubName" type="text"
 							placeholder="贰叁叁俱乐部"
-							value="{{ currentRole === 'holder' ? (user.club.name || '') : '' }}"
+							value="{{ currentRole === 'manager' ? (user.club.name || '') : '' }}"
 						/>
 					</view>
 				</view>
@@ -100,7 +100,7 @@
 					<view class="right">
 						<input name="clubAddr" type="text"
 							placeholder="延平路425"
-							value="{{ currentRole === 'holder' ? (user.club.address || '') : '' }}"
+							value="{{ currentRole === 'manager' ? (user.club.address || '') : '' }}"
 						/>
 					</view>
 				</view>
@@ -113,7 +113,7 @@
 					<view class="right">
 						<input name="clubDesc" type="text"
 							placeholder="空空如也"
-							value="{{ currentRole === 'holder' ? (user.club.description || '') : '' }}"
+							value="{{ currentRole === 'manager' ? (user.club.description || '') : '' }}"
 						/>
 					</view>
 				</view>
